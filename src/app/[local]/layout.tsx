@@ -38,7 +38,7 @@ export default async function LocaleLayout({
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header  />
           {children}
-          <Banner />
+          {/* <Banner /> */}
         </div>
         </NextIntlClientProvider>
       </body>

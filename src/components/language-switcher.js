@@ -9,7 +9,6 @@ export default function LangSwitcher() {
 
   const handleChange = (e) => {
     console.log("1221", e.target.value);
-    console.log("1221", e.target.value);
     router.push(pathname, { locale: e.target.value });
   };
  
@@ -18,7 +17,7 @@ export default function LangSwitcher() {
       <select
       value={locale}
         onChange={handleChange}
-        className="h-8 m-2 p-1 rounded border-current"
+        className="h-8 m-2 p-1 rounded "
       >
         <option value={locale} > {GetLangData(locale).name}</option>
 

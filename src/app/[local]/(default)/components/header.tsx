@@ -1,41 +1,51 @@
 "use client";
 
 import { Layout, Flex, Button, Typography } from "antd";
+import FeatImage01 from "@/public/images/handle-pic-01.png";
+import Image from "next/image";
 const imgStyle: React.CSSProperties = {
   display: "block",
   width: 400,
 };
 export default function HomeHeader() {
   return (
-    <section className="bg-emerald-500">
-      <div className="relative pt-32 pb-10 md:pt-40 md:pb-16  ">
-        <Flex justify="space-evenly">
-          <img
-            alt="avatar"
-            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-            style={imgStyle}
+    <section className="pt-40  bg-slate-600 p-16">
+      <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+        {/* Image */}
+        <div
+          className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl"
+          data-aos="fade-up"
+        >
+          <Image
+            className="max-w-full mx-auto md:max-w-none h-auto rounded-lg bg-gray-100"
+            src={FeatImage01}
+            width={500}
+            height={400}
+            alt="Features"
           />
-          <Flex
-            vertical
-            align="center"
-            justify="space-between"
-            className="p-5"
-          >
-            <Flex vertical  align="">
-            <Typography.Title level={1} >
-              Welcome to our<br></br> Remind<br></br> Community
-            </Typography.Title>
-            <Typography.Title level={5} >
-              Welcome to ourWelcome to our Welcome to our<br></br> Remind Remind Remind Remind<br></br> Community
-            </Typography.Title>
-            </Flex>
-            <img
-              alt="avatar"
-              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-              className="w-40 block"
+        </div>
+        {/* Content */}
+        <div
+          className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
+          data-aos="fade-right"
+        >
+          <div className="md:pr-4 lg:pr-12 xl:pr-16">
+            <h3 className="h3 mb-3">WelCome to our</h3>
+            <h3 className="h3 mb-3">Remind</h3>
+            <h3 className="h3 mb-3">Community</h3>
+            <p className="text-xl text-gray-400 mb-4">
+              Such as Exception Handling Interface,Advanca Function
+              Interfaces,Communication Service,Computing Intenslve,etc
+            </p>
+            <Image
+              className="max-w-full mx-auto md:max-w-none h-auto rounded-lg bg-gray-100"
+              src={FeatImage01}
+              width={200}
+              height={200}
+              alt="Features"
             />
-          </Flex>
-        </Flex>
+          </div>
+        </div>
       </div>
     </section>
   );

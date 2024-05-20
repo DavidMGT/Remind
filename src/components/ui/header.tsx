@@ -1,11 +1,11 @@
-'use client';
+"use client";
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import { CaretDownOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Dropdown, Space, Image ,message} from "antd";
+import { Dropdown, Space, Image, message } from "antd";
 import { useState, useRef, useEffect } from "react";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 import LanguageSwitcher from "../language-switcher";
 const items: MenuProps["items"] = [
   {
@@ -36,12 +36,11 @@ const langs: MenuProps["items"] = [
   },
 ];
 
-
- const  Header=()=> {
-  const t = useTranslations('Index');
-  const handleMenuClick = (e:any) => {
-    var loacal=e['key'];
-    console.log('click', loacal);
+const Header = () => {
+  const t = useTranslations("Index");
+  const handleMenuClick = (e: any) => {
+    var loacal = e["key"];
+    console.log("click", loacal);
   };
 
   return (
@@ -61,14 +60,14 @@ const langs: MenuProps["items"] = [
           </div>
           <Dropdown menu={{ items }} className="px-6">
             <Space>
-             {t('Perpheral device')}
+              {t("Perpheral device")}
               <CaretDownOutlined />
             </Space>
           </Dropdown>
           <Dropdown menu={{ items }} className="px-6">
             <a>
               <Space>
-                {t('Algorithm')}
+                {t("Algorithm")}
                 <CaretDownOutlined />
               </Space>
             </a>
@@ -87,16 +86,16 @@ const langs: MenuProps["items"] = [
             {/* Desktop sign in gitlinks */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Dropdown
-                  menu={{items:langs,onClick:handleMenuClick}}
+                {/* <Dropdown
+                  menu={{ items: langs, onClick: handleMenuClick }}
                   className="px-6"
                 >
                   <Space>Language</Space>
                 </Dropdown>
               </li>
-<li>
-  <LanguageSwitcher></LanguageSwitcher>
-</li>
+              <li> */}
+                <LanguageSwitcher></LanguageSwitcher>
+              </li>
               <li>
                 <Link
                   href="/signup"
@@ -113,5 +112,5 @@ const langs: MenuProps["items"] = [
       </div>
     </header>
   );
-}
+};
 export default Header;

@@ -4,9 +4,9 @@ import { useEffect } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
-import PageIllustration from '@/src/app/components/page-illustration'
-import Footer from '@/src/app/components/ui/footer'
+import 'antd/dist/reset.css';
+import PageIllustration from '@/src/components/page-illustration'
+import Footer from '@/src/components/ui/footer'
 
 export default function DefaultLayout({
   children,

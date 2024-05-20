@@ -1,10 +1,11 @@
 // 'use server'
-import './css/style.css'
+import '../../../css/style.css'
+import 'antd/dist/reset.css';
 import { Inter, Architects_Daughter } from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
-import Header from '@/src/app/components/ui/header'
-import Banner from '@/src/app/components/banner'
+import Header from '@/src/components/ui/header'
+import Banner from '@/src/components/banner'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',

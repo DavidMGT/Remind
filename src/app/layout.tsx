@@ -1,7 +1,7 @@
 // 'use server'
 import './css/style.css'
 import './ui/global.css'
-import { Inter, Architects_Daughter } from 'next/font/google'
+import { Inter, Architects_Daughter } from 'next/font/google'//Inter font 字体样式库
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Header from '@/src/components/ui/header'
@@ -32,7 +32,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased text-gray-200 tracking-tight`}>
+      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased text-black tracking-tight`}>
       <NextIntlClientProvider messages={messages} >
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header  />

@@ -62,6 +62,7 @@ const Header = () => {
             </Link>
           </div>
           <DropDownList
+          listOffsetY={20}
             list={[
               {
                 label: (
@@ -79,11 +80,7 @@ const Header = () => {
               },
             ]}
           >
-            <div
-              className=" h-[100px] bg-red-500"
-            >
-              {t("Perpheral device")}
-            </div>
+            {t("Perpheral device")}
           </DropDownList>
           <DropDownList
             list={[
@@ -103,7 +100,7 @@ const Header = () => {
               },
             ]}
           >
-            <div> {t("Algorithm")}</div>
+           {t("Algorithm")}
           </DropDownList>
           <DropDownList
             list={[

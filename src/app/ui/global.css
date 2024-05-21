@@ -1,8 +1,8 @@
 .dropdown:hover > .dropdown-list {
-    opacity: 1;
-    transform: translate(-50%, 100%);
-  }
-  .dropdown:hover > .dropdown-btn .arrow {
-    text-decoration: none;
-    transform: rotate(180deg);
-  }
+  opacity: 1;
+  transform: translate(-50%, 100%);
+}
+.dropdown:hover > .dropdown-btn .arrow {
+  text-decoration: none;
+  transform: rotate(180deg);
+}

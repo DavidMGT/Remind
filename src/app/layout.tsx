@@ -1,11 +1,10 @@
 // 'use server'
-import '../../../css/style.css'
-import 'antd/dist/reset.css';
+import './css/style.css'
+import './ui/global.css'
 import { Inter, Architects_Daughter } from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Header from '@/src/components/ui/header'
-import Banner from '@/src/components/banner'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -33,7 +32,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
+      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased text-gray-200 tracking-tight`}>
       <NextIntlClientProvider messages={messages} >
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header  />

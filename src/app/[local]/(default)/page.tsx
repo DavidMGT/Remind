@@ -11,16 +11,20 @@ import Testimonials from "@/src/components/testimonials";
 import HomeHeader from "./components/header";
 import Blocks from "../../../components/blocks";
 import HomeMiddle from "./components/home-middle";
+import HomeInteraction from "./components/interaction";
+import { Button } from "antd";
 
 export default function Home() {
   return (
     <>
+    
       <HomeHeader />
       {/* <Hero /> */}
       <HomeMiddle/>
-      <Features />
-      <Zigzag /> 
-      {/* <Testimonials /> */}
+      <HomeInteraction/>
+      {/* <Features />
+      <Zigzag />  */}
+      <Testimonials />
       <Newsletter />
     </>
   );

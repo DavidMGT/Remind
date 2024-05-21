@@ -3,10 +3,6 @@
 import { Layout, Flex, Button, Typography } from "antd";
 import FeatImage01 from "@/public/images/handle-pic-01.png";
 import Image from "next/image";
-const imgStyle: React.CSSProperties = {
-  display: "block",
-  width: 400,
-};
 export default function HomeHeader() {
   return (
     <section className="pt-40  bg-slate-600 p-16">

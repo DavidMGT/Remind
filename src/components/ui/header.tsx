@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
-import { CaretDownOutlined } from "@ant-design/icons";
+import { SearchOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Dropdown, Space, Image, message, Button } from "antd";
+import { Dropdown, Space, Image, message, Input } from "antd";
 import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "../language-switcher";
@@ -47,9 +47,9 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute w-full z-30 bg-slate-500">
-      <div className="max-w-6xl mx-auto px-4 ">
-        <div className="flex items-center justify-between h-20">
+    <header className="absolute w-full z-30 rounded-b-lg border-2 border-spacing-x-40 border-x-cyan-100">
+      <div className="max-w-6xl mx-auto px-4  ">
+        <div className="flex  items-center justify-between h-20 ">
           {/* Site branding */}
           <div className="shrink-0 mr-4">
             {/* Logo */}
@@ -61,71 +61,82 @@ const Header = () => {
               />
             </Link>
           </div>
-          <DropDownList
-          listOffsetY={20}
-            list={[
-              {
-                label: (
-                  <Link href="/signup" className="block" aria-label="Cruip">
-                    Sign Out
-                  </Link>
-                ),
-              },
-              {
-                label: (
-                  <Link href="/signin" className="block" aria-label="Cruip">
-                    Sign In
-                  </Link>
-                ),
-              },
-            ]}
-          >
-            {t("Perpheral device")}
-          </DropDownList>
-          <DropDownList
-            list={[
-              {
-                label: (
-                  <Link href="/signup" className="block" aria-label="Cruip">
-                    Sign Out
-                  </Link>
-                ),
-              },
-              {
-                label: (
-                  <Link href="/signin" className="block" aria-label="Cruip">
-                    Sign In
-                  </Link>
-                ),
-              },
-            ]}
-          >
-           {t("Algorithm")}
-          </DropDownList>
-          <DropDownList
-            list={[
-              {
-                label: (
-                  <Link href="/signup" className="block" aria-label="Cruip">
-                    Sign Out
-                  </Link>
-                ),
-              },
-              {
-                label: (
-                  <Link href="/signin" className="block" aria-label="Cruip">
-                    Sign In
-                  </Link>
-                ),
-              },
-            ]}
-          >
-            {t("SDK")}
-          </DropDownList>
+          {/* dropdown */}
+          <div className="flex  items-center justify-center ">
+            <DropDownList
+              list={[
+                {
+                  label: (
+                    <Link href="/signup" className="block" aria-label="Cruip">
+                      Sign Out
+                    </Link>
+                  ),
+                },
+                {
+                  label: (
+                    <Link href="/signin" className="block" aria-label="Cruip">
+                      Sign In
+                    </Link>
+                  ),
+                },
+              ]}
+            >
+              {t("Perpheral device")}
+            </DropDownList>
+            <DropDownList
+              list={[
+                {
+                  label: (
+                    <Link href="/signup" className="block" aria-label="Cruip">
+                      Sign Out
+                    </Link>
+                  ),
+                },
+                {
+                  label: (
+                    <Link href="/signin" className="block" aria-label="Cruip">
+                      Sign In
+                    </Link>
+                  ),
+                },
+              ]}
+            >
+              {t("Algorithm")}
+            </DropDownList>
+            <DropDownList
+              list={[
+                {
+                  label: (
+                    <Link href="/signup" className="block" aria-label="Cruip">
+                      Sign Out
+                    </Link>
+                  ),
+                },
+                {
+                  label: (
+                    <Link href="/signin" className="block" aria-label="Cruip">
+                      Sign In
+                    </Link>
+                  ),
+                },
+              ]}
+            >
+              SDK
+            </DropDownList>
+          </div>
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in gitlinks */}
+
             <ul className="flex grow justify-end flex-wrap items-center">
+              <li>
+                {" "}
+                <Input
+                  size="large"
+                  placeholder="please input "
+                  prefix={<SearchOutlined />}
+                />
+              </li>
               <li>
                 <LanguageSwitcher></LanguageSwitcher>
               </li>

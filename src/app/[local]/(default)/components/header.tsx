@@ -5,7 +5,7 @@ import FeatImage01 from "@/public/images/handle-pic-01.png";
 import Image from "next/image";
 export default function HomeHeader() {
   return (
-    <section className="pt-40  bg-slate-600 p-16">
+    <section className="pt-40 p-16">
       <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
         {/* Image */}
         <div

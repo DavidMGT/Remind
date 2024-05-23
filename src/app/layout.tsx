@@ -7,7 +7,6 @@ import {
   NextIntlClientProvider,
   useMessages,
 } from "next-intl";
-import { getMessages } from "next-intl/server";
 import Header from "@/src/app/[local]/ui/home/header";
 const inter = Inter({
   subsets: ["latin"],

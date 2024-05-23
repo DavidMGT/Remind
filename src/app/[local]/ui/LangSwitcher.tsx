@@ -44,7 +44,8 @@ const LangSwitcher: React.FC = () => {
                 return (
                   <Link
                     key={lang.code}
-                    href={`/${lang.code}/${urlSegments.join('/')}`}
+                    href={`/${lang.code}/start--${urlSegments}--end`}
+                    // href={`/${lang.code}/${urlSegments.join('/')}`}
                   >
                     <button
                       lang={lang.code}

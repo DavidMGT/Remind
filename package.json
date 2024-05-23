@@ -16,14 +16,17 @@
     "@types/react-dom": "^18.2.17",
     "antd": "^5.17.2",
     "aos": "^3.0.0-beta.6",
+    "clsx": "^2.1.0",
     "flowbite": "^2.3.0",
     "next": "^14.0.4",
     "next-intl": "^3.14.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^5.2.1",
     "react-intl": "^6.6.6",
     "sass": "^1.77.2",
     "styled-components": "^6.1.11",
+    "tailwind-merge": "^2.2.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

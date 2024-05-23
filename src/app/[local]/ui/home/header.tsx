@@ -6,8 +6,8 @@ import type { MenuProps } from "antd";
 import { Dropdown, Space, Image, message, Input } from "antd";
 import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "../language-switcher";
-import DropDownList from "@/src/app/ui/dropdown/drowpdown";
+import LangSwitcher from "@/src/app/[local]/ui/LangSwitcher";
+import DropDownList from "@/src/app/[local]/ui/dropdown/drowpdown";
 const items: MenuProps["items"] = [
   {
     key: "1",
@@ -47,7 +47,7 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute w-full z-30 rounded-b-lg border-2 border-spacing-x-40 border-x-cyan-100">
+    <header className="fixed w-full z-30 rounded-b-lg border-2 border-spacing-x-40 border-x-cyan-100 bg-white">
       <div className="max-w-6xl mx-auto px-4  ">
         <div className="flex  items-center justify-between h-20 ">
           {/* Site branding */}
@@ -138,7 +138,7 @@ const Header = () => {
                 />
               </li>
               <li>
-                <LanguageSwitcher></LanguageSwitcher>
+                <LangSwitcher />
               </li>
               <li>
                 <Link

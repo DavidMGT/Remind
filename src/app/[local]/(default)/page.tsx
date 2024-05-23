@@ -3,13 +3,13 @@ export const metadata = {
   description: "Page description",
 };
 
-import Hero from "@/src/components/hero";
-import Features from "@/src/components/features";
-import Newsletter from "@/src/components/newsletter";
-import Zigzag from "@/src/components/zigzag";
-import Testimonials from "@/src/components/testimonials";
+import Hero from "@/src/app/[local]/ui/hero";
+import Features from "@/src/app/[local]/ui/features";
+import Newsletter from "@/src/app/[local]/ui/newsletter";
+import Zigzag from "@/src/app/[local]/ui/zigzag";
+import Testimonials from "@/src/app/[local]/ui/testimonials";
 import HomeHeader from "./components/header";
-import Blocks from "../../../components/blocks";
+import Blocks from "../ui/blocks";
 import HomeMiddle from "./components/home-middle";
 import HomeInteraction from "./components/interaction";
 import { Button } from "antd";
